@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // ✅ add this import
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
+            Hey Zen is here. Get started by editing{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
               app/page.tsx
             </code>
@@ -24,6 +25,29 @@ export default function Home() {
             Save and see your changes instantly.
           </li>
         </ol>
+        <div className="flex flex-col items-center text-center px-4 py-12">
+          oh yeah
+        </div>
+
+        <h1 className="text-5xl font-extrabold text-sky-900 mb-4">
+          ok, no idea what to do
+        </h1> 
+ 
+        <Link
+          href="https://en.wikipedia.org/wiki/Next.js" // ✅ using Wikipedia link as example
+          className="bg-gradient-to-r from-sky-400 to-sky-600 text-white px-6 py-3 rounded-full 
+          text-lg font-semibold hover:to-sky-700 transition"
+        >
+          Start Now
+        </Link>
+
+        <div><p>Today </p></div>
+        <div>
+          <div>
+            <span>do 30 minute yoga</span>
+            <span>7:30 AM</span>
+          </div>
+        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
