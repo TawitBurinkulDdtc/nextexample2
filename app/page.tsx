@@ -26,7 +26,7 @@ export default function Home() {
           </li>
         </ol>
         <div className="flex flex-col items-center text-center px-4 py-12">
-          oh yeah, update work
+          oh yeah, update work, now test again
         </div>
 
         <h1 className="text-5xl font-extrabold text-sky-900 mb-4">
