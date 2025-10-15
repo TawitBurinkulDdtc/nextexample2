@@ -5,14 +5,14 @@ export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        {/* <Image
+        <Image
           className="dark:invert"
-          src="/next.svg"
+          src="/Logo.png"
           alt="Next.js logo"
           width={180}
           height={38}
           priority
-        /> */}
+        />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           {/* <li className="mb-2 tracking-[-.01em]">
             Hey Zen is here. Get started by editing{" "}
@@ -35,7 +35,7 @@ export default function Home() {
          
         <Image
           className="dark:invert"
-          src="/Logo.png"
+          src="/Angry Birb.png"
           alt="Next.js logo"
           width={180}
           height={38}
@@ -46,7 +46,7 @@ export default function Home() {
           className="bg-gradient-to-r from-sky-400 to-sky-600 text-white px-6 py-3 rounded-full 
           text-lg font-semibold hover:to-sky-700 transition"
         >
-          First game 22
+          Angry Bird
         </Link>
 
 
