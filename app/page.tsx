@@ -32,7 +32,7 @@ export default function Home() {
         <h1 className="text-5xl font-extrabold text-sky-900 mb-4">
           Game searching app
         </h1> 
-          {/* import profilePic from '../public/profile.png'; */}
+         
         <Image
           className="dark:invert"
           src="/Logo.png"
