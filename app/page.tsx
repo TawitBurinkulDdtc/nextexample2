@@ -58,7 +58,7 @@ export default function Home() {
 
         <Image
           className="dark:invert"
-          src="/next.svg"
+          src="/Angry Birb - Copy.png"
           alt="Next.js logo"
           width={180}
           height={38}
