@@ -46,7 +46,7 @@ export default function Home() {
           className="bg-gradient-to-r from-sky-400 to-sky-600 text-white px-6 py-3 rounded-full 
           text-lg font-semibold hover:to-sky-700 transition"
         >
-          First game 2
+          First game 22
         </Link>
 
 
