@@ -32,7 +32,7 @@ export default function Home() {
         <h1 className="text-5xl font-extrabold text-sky-900 mb-4">
           Game searching app
         </h1> 
-            
+          import profilePic from '../public/profile.png';
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -52,7 +52,7 @@ export default function Home() {
 
         <Image
           className="dark:invert"
-          src="/next.svg"
+          src="../nextexample2/Logo.png"
           alt="Next.js logo"
           width={180}
           height={38}
