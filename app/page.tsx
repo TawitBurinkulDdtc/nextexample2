@@ -42,11 +42,28 @@ export default function Home() {
           priority
         />    
         <Link
-          href="https://en.wikipedia.org/wiki/Next.js" // ✅ using Wikipedia link as example
+          href="https://en.wikipedia.org/wiki/Angry_Birds" // ✅ using Wikipedia link as example
           className="bg-gradient-to-r from-sky-400 to-sky-600 text-white px-6 py-3 rounded-full 
           text-lg font-semibold hover:to-sky-700 transition"
         >
           First game
+        </Link>
+
+
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />    
+        <Link
+          href="https://en.wikipedia.org/wiki/Domestic_pigeon" 
+          className="bg-gradient-to-r from-sky-400 to-sky-600 text-white px-6 py-3 rounded-full 
+          text-lg font-semibold hover:to-sky-700 transition"
+        >
+          Second game
         </Link>
 
 
