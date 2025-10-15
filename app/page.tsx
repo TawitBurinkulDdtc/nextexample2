@@ -13,7 +13,7 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
+        {/* <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
            <li className="mb-2 tracking-[-.01em]">
             Hey Zen is here. Get started by editing{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
@@ -24,15 +24,21 @@ export default function Home() {
           <li className="tracking-[-.01em]">
             Game search engine web
           </li>
-        </ol>
-        <div className="flex flex-col items-center text-center px-4 py-12">
-          DDCT homework
-        </div>
+        </ol> */}
+
+
+       
+
 
         <h1 className="text-5xl font-extrabold text-sky-900 mb-4">
-          Game searching app
+          Game searching web
         </h1> 
          
+        <div className="flex flex-col items-center text-center px-4 py-12">
+          Welcome to Game searching web. A web that show lot of games.
+        </div>
+
+
         <Image
           className="dark:invert"
           src="/Angry Birb.png"
