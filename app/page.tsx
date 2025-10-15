@@ -35,7 +35,7 @@ export default function Home() {
           {/* import profilePic from '../public/profile.png'; */}
         <Image
           className="dark:invert"
-          src="/nextexample2/Logo.png"
+          src="/Logo.png"
           alt="Next.js logo"
           width={180}
           height={38}
