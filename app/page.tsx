@@ -30,7 +30,7 @@ export default function Home() {
        
 
 
-        <h1 className="text-5xl font-extrabold text-sky-900 mb-4">
+        <h1 className="text-5xl font-extrabold text-green-900 mb-4">
           Game searching web
         </h1> 
          
@@ -49,8 +49,8 @@ export default function Home() {
         />    
         <Link
           href="https://en.wikipedia.org/wiki/Angry_Birds" // ✅ using Wikipedia link as example
-          className="bg-gradient-to-r from-sky-400 to-sky-600 text-white px-6 py-3 rounded-full 
-          text-lg font-semibold hover:to-sky-700 transition"
+          className="bg-gradient-to-r from-green-600 to-green-600 text-white px-6 py-3 rounded-full 
+          text-lg font-semibold hover:to-green-700 transition"
         >
           Angry Bird
         </Link>
@@ -66,7 +66,7 @@ export default function Home() {
         />    
         <Link
           href="https://en.wikipedia.org/wiki/Domestic_pigeon" 
-          className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 rounded-full 
+          className="bg-gradient-to-r from-green-600 to-green-600 text-white px-6 py-3 rounded-full 
           text-lg font-semibold hover:to-green-700 transition"
         >
           Happy Pigeon
