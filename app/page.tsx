@@ -14,40 +14,41 @@ export default function Home() {
           priority
         /> */}
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
+          {/* <li className="mb-2 tracking-[-.01em]">
             Hey Zen is here. Get started by editing{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
               app/page.tsx
             </code>
             .
-          </li>
+          </li> */}
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            Game search engine web
           </li>
         </ol>
         <div className="flex flex-col items-center text-center px-4 py-12">
-          oh what
+          DDCT homework
         </div>
 
         <h1 className="text-5xl font-extrabold text-sky-900 mb-4">
-          ok, no idea what to do
+          Game searching app
         </h1> 
- 
+            
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />    
         <Link
           href="https://en.wikipedia.org/wiki/Next.js" // ✅ using Wikipedia link as example
           className="bg-gradient-to-r from-sky-400 to-sky-600 text-white px-6 py-3 rounded-full 
           text-lg font-semibold hover:to-sky-700 transition"
         >
-          Start Now
+          First game
         </Link>
 
-        <div><p>Today </p></div>
-        <div>
-          <div>
-            <span>do 30 minute yoga</span>
-            <span>7:30 AM</span>
-          </div>
-        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
@@ -76,7 +77,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
+        {/* <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
@@ -120,7 +121,7 @@ export default function Home() {
             height={16}
           />
           Go to nextjs.org →
-        </a>
+        </a> */}
       </footer>
     </div>
   );
