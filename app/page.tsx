@@ -52,7 +52,7 @@ export default function Home() {
           className="bg-gradient-to-r from-green-600 to-green-600 text-white px-6 py-3 rounded-full 
           text-lg font-semibold hover:to-green-700 transition"
         >
-          Angry Bird
+          Angry Bird updated
         </Link>
 
 
