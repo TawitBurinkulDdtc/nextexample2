@@ -48,7 +48,7 @@ export default function Home() {
           priority
         />    
         <Link
-          href="https://en.wikipedia.org/wiki/Angry_Birds" // ✅ using Wikipedia link as example
+          href="/angrybird"
           className="bg-gradient-to-r from-green-600 to-green-600 text-white px-6 py-3 rounded-full 
           text-lg font-semibold hover:to-green-700 transition"
         >
