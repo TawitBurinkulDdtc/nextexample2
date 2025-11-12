@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link"; 
+import Link from "next/link";
 
 export default function Home() {
   const games = [
@@ -8,42 +8,50 @@ export default function Home() {
       price: "$14.39",
       discount: "20% OFF",
       image: "/Angry Birb.png",
+      link: "https://en.wikipedia.org/wiki/Domestic_pigeon",
     },
     {
       title: "Indiepocalypse #70",
       price: "$15",
       image: "/Angry Birb2.png",
+      link: "https://en.wikipedia.org/wiki/Columbidae",
     },
     {
       title: "No Players Online",
       price: "$13.49",
       discount: "10% OFF",
       image: "/Angry Birb3.png",
+      link: "https://en.wikipedia.org/wiki/List_of_birds",
     },
     {
       title: "Doce Fim ~sweetend placebo~",
       price: "WEB",
       image: "/Angry Birb4.png",
+      link: "https://en.wikipedia.org/wiki/Ostrich",
     },
     {
       title: "Servant of the Lake",
       price: "FREE",
       image: "/Angry Birb5.png",
+      link: "https://en.wikipedia.org/wiki/Kiwi_(bird)",
     },
     {
       title: "Sokker",
       price: "$3",
       image: "/Angry Birb6.png",
+      link: "https://en.wikipedia.org/wiki/Soccer",
     },
     {
       title: "Gnomeball",
       price: "FREE",
       image: "/Angry Birb7.png",
+      link: "https://en.wikipedia.org/wiki/Penguin",
     },
     {
       title: "Sportaldislexicartaphobia",
       price: "FREE",
       image: "/Angry Birb8.png",
+      link: "https://en.wikipedia.org/wiki/Parrot",
     },
   ];
 
@@ -59,12 +67,15 @@ export default function Home() {
         </button>
       </div>
 
-      {/* Games Grid */}
+      {/* Game Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {games.map((game, index) => (
-          <div
+          <Link
             key={index}
-            className="bg-white border border-gray-200 rounded-md shadow-sm overflow-hidden hover:shadow-md transition"
+            href={game.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white border border-gray-200 rounded-md shadow-sm overflow-hidden hover:shadow-md transition group"
           >
             {/* Game Image */}
             <div className="relative w-full h-48 overflow-hidden">
@@ -72,14 +83,9 @@ export default function Home() {
                 src={game.image}
                 alt={game.title}
                 fill
-                className="object-cover transition-transform duration-500 hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 unoptimized
               />
-              <Link
-                href="https://en.wikipedia.org/wiki/Domestic_pigeon" 
-                className="bg-gradient-to-r from-green-600 to-green-600 text-white px-6 py-3 rounded-full 
-                text-lg font-semibold hover:to-green-700 transition"
-              ></Link>
               {game.discount && (
                 <div className="absolute bottom-2 right-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">
                   {game.discount}
@@ -89,11 +95,11 @@ export default function Home() {
 
             {/* Game Info */}
             <div className="p-3">
-              <h2 className="font-semibold text-gray-800 truncate">
+              <h2 className="font-semibold text-gray-800 truncate group-hover:text-pink-600 transition-colors">
                 {game.title}
               </h2>
               <p className="text-sm text-gray-600 mt-1 line-clamp-2">
-                A unique and fun adventure featuring {game.title}.
+                A unique and fun indie experience called {game.title}.
               </p>
 
               <div className="mt-3 text-right">
@@ -102,7 +108,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

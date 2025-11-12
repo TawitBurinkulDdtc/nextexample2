@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Game Search",
-  description: "An indie game showcase site inspired by Itch.io",
+  title: "Game Search Showcase",
+  description: "Inspired by Itch.io, made with Next.js",
 };
 
 export default function RootLayout({
@@ -27,10 +27,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
       >
-        {/* Top navigation bar */}
+        {/* Top Navigation Bar */}
         <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
           <div className="max-w-7xl mx-auto flex items-center justify-between px-6 h-14">
-            {/* Left nav links */}
+            {/* Navigation Links */}
             <nav className="flex items-center space-x-6 text-sm font-medium text-gray-700">
               <a href="#" className="hover:text-pink-600">
                 Game Jams
@@ -46,7 +46,7 @@ export default function RootLayout({
               </a>
             </nav>
 
-            {/* Search bar */}
+            {/* Search Bar + Buttons */}
             <div className="flex items-center space-x-4">
               <input
                 type="text"
@@ -63,7 +63,7 @@ export default function RootLayout({
           </div>
         </header>
 
-        {/* Page content */}
+        {/* Main Page Content */}
         <main className="pt-16 max-w-7xl mx-auto px-6">{children}</main>
       </body>
     </html>
