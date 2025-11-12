@@ -11,10 +11,10 @@ export default function Home() {
       link: "https://en.wikipedia.org/wiki/Domestic_pigeon",
     },
     {
-      title: "Indiepocalypse #70",
+      title: "Indiepocalypse #70Upda1",
       price: "$15",
       image: "/Angry Birb2.png",
-      link: "https://en.wikipedia.org/wiki/Columbidae",
+      link: "/angrybird",
     },
     {
       title: "No Players Online",
