@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; 
 
 export default function Home() {
   const games = [
@@ -74,6 +75,11 @@ export default function Home() {
                 className="object-cover transition-transform duration-500 hover:scale-105"
                 unoptimized
               />
+              <Link
+                href="https://en.wikipedia.org/wiki/Domestic_pigeon" 
+                className="bg-gradient-to-r from-green-600 to-green-600 text-white px-6 py-3 rounded-full 
+                text-lg font-semibold hover:to-green-700 transition"
+              ></Link>
               {game.discount && (
                 <div className="absolute bottom-2 right-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">
                   {game.discount}
