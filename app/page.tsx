@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+import React from "react";
+import { createClient } from "../lib/supabase/server";
+import { cookies } from "next/headers"
+
+export default async function Home() {
   const games = [
     {
       title: "Bittersweet Birthday",
@@ -55,6 +59,19 @@ export default function Home() {
     },
   ];
 
+  //New book example stuff
+  const cookieStore = await cookies();
+    const supabase = createClient(cookieStore);
+    
+    const {data: newestBooks, error } = await supabase. from ('bookcopy')
+      .select('copyid, book( isbn, title, publisher, pubyear,language,author(name) )')
+      .order('acquisitiondate', {ascending:false})
+      .limit(5);
+      if (error){
+        console.log("Error fetching newest book:", error);
+      }
+      ///////
+  
   return (
     <div className="py-10">
       {/* Header Section */}
@@ -111,6 +128,12 @@ export default function Home() {
           </Link>
         ))}
       </div>
+
+      <div>
+        Test book stuff, huh????
+        {games[1].price}
+      </div>
     </div>
   );
 }
+

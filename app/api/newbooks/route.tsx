@@ -7,7 +7,7 @@ export async function GET(req:NextRequest){
   const supabase = createClient(cookieStore);
   
   const {data: newestBooks, error } = await supabase. from ('bookcopy')
-    .select('copyid, book( isbn, title, publisher, pubyear)')
+    .select('copyid, book( isbn, title, publisher, pubyear,language,author(name))')
     .order('acquisitiondate', {ascending:false})
     .limit(5);
     if (error){
