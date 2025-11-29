@@ -32,7 +32,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto flex items-center justify-between px-6 h-14">
             {/* Navigation Links */}
             <nav className="flex items-center space-x-6 text-sm font-medium text-gray-700">
-              <a href="#" className="hover:text-pink-600">
+              <a href="/#" className="hover:text-pink-600">
                 Game web Uni Project
               </a>
             </nav>
@@ -41,16 +41,19 @@ export default function RootLayout({
             <div className="flex items-center space-x-4">
               <input
                 type="text"
-                placeholder="Search for games, jams, tags or creators"
+                placeholder="Search for games with tags or creators"
                 className="w-64 sm:w-80 px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
+              
               <button className="text-sm font-medium text-gray-700 hover:text-pink-600">
-                <a href="/angrybird" className="hover:text-pink-600">
+                <a href="/loginPage" className="hover:text-pink-600">
                   Log in
                 </a>
               </button>
               <button className="text-sm font-medium bg-pink-600 text-white px-3 py-1.5 rounded hover:bg-pink-700 transition">
-                Register
+                <a href="/registerPage" className="hover:text-pink-600">
+                  Register
+                </a>
               </button>
             </div>
           </div>
