@@ -77,7 +77,7 @@ export default async function Home() {
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">
-          Latest Featured Games
+          Games
         </h1>
         <button className="text-pink-600 font-medium hover:underline">
           View all →
@@ -130,7 +130,7 @@ export default async function Home() {
       </div>
 
       <div>
-        Test book stuff, huh????
+        Test book stuff, huh?????
         {games[1].price}
       </div>
     </div>

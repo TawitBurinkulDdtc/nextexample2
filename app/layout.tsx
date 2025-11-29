@@ -33,16 +33,7 @@ export default function RootLayout({
             {/* Navigation Links */}
             <nav className="flex items-center space-x-6 text-sm font-medium text-gray-700">
               <a href="#" className="hover:text-pink-600">
-                Game Jams
-              </a>
-              <a href="#" className="hover:text-pink-600">
-                Upload Game
-              </a>
-              <a href="#" className="hover:text-pink-600">
-                Developer Logs
-              </a>
-              <a href="#" className="hover:text-pink-600">
-                Community
+                Game web Uni Project
               </a>
             </nav>
 
@@ -54,7 +45,9 @@ export default function RootLayout({
                 className="w-64 sm:w-80 px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
               <button className="text-sm font-medium text-gray-700 hover:text-pink-600">
-                Log in
+                <a href="/angrybird" className="hover:text-pink-600">
+                  Log in
+                </a>
               </button>
               <button className="text-sm font-medium bg-pink-600 text-white px-3 py-1.5 rounded hover:bg-pink-700 transition">
                 Register
