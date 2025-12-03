@@ -8,52 +8,50 @@ import { cookies } from "next/headers"
 export default async function Home() {
   const games = [
     {
-      title: "Bittersweet Birthday",
-      price: "$14.39",
-      discount: "20% OFF",
+      title: "Test1",
+      tag: "Horror",
       image: "/Angry Birb.png",
       link: "https://en.wikipedia.org/wiki/Domestic_pigeon",
     },
     {
-      title: "Indiepocalypse #70Upda1",
-      price: "$15",
+      title: "Test2",
+      tag: "Horror",
       image: "/Angry Birb2.png",
       link: "/angrybird",
     },
     {
-      title: "No Players Online",
-      price: "$13.49",
-      discount: "10% OFF",
+      title: "Test3",
+      tag: "Simulation",
       image: "/Angry Birb3.png",
       link: "https://en.wikipedia.org/wiki/List_of_birds",
     },
     {
-      title: "Doce Fim ~sweetend placebo~",
-      price: "WEB",
+      title: "Test4",
+      tag: "Visual novel",
       image: "/Angry Birb4.png",
       link: "https://en.wikipedia.org/wiki/Ostrich",
     },
     {
-      title: "Servant of the Lake",
-      price: "FREE",
+      title: "Test5",
+      tag: "Visual novel",
       image: "/Angry Birb5.png",
       link: "https://en.wikipedia.org/wiki/Kiwi_(bird)",
     },
     {
-      title: "Sokker",
-      price: "$3",
+      title: "Test6",
+      tag: "First-Person shooter",
       image: "/Angry Birb6.png",
       link: "https://en.wikipedia.org/wiki/Soccer",
     },
     {
-      title: "Gnomeball",
-      price: "FREE",
+      title: "Test7",
+      tag: "Action",
       image: "/Angry Birb7.png",
       link: "https://en.wikipedia.org/wiki/Penguin",
     },
     {
-      title: "Sportaldislexicartaphobia",
-      price: "FREE",
+      title: "Test8",
+      tag: "Rpg",
       image: "/Angry Birb8.png",
       link: "https://en.wikipedia.org/wiki/Parrot",
     },
@@ -103,11 +101,7 @@ export default async function Home() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 unoptimized
               />
-              {game.discount && (
-                <div className="absolute bottom-2 right-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">
-                  {game.discount}
-                </div>
-              )}
+              
             </div>
 
             {/* Game Info */}
@@ -119,9 +113,10 @@ export default async function Home() {
                 A unique and fun indie experience called {game.title}.
               </p>
 
+              
               <div className="mt-3 text-right">
                 <span className="text-xs font-semibold text-gray-800 bg-gray-100 px-2 py-1 rounded">
-                  {game.price}
+                  {game.tag}
                 </span>
               </div>
             </div>
@@ -131,7 +126,7 @@ export default async function Home() {
 
       <div>
         Test book stuff, huh?????
-        {games[1].price}
+        {games[1].tag}
       </div>
     </div>
   );
