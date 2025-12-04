@@ -14,7 +14,7 @@ export default async function Home() {
   const supabase = createClient(cookieStore);
     
     const {data: gameList, error } = await supabase. from ('gamewebgamelist')
-      .select('game_id,game_name,game_tag')
+      .select('game_id,game_name,game_tag,game_creator,game_picture')
       .order('game_id', {ascending:false});
       if (error){
         console.log("Error fetching newest book:", error);
@@ -50,7 +50,7 @@ export default async function Home() {
             {/* Game Image */}
             <div className="relative w-full h-48 overflow-hidden">
               <Image
-                src={"/Angry Birb5.png"} //picure here
+                src={game.game_picture} //picure here
                 alt={"/Angry Birb5.png"}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -65,7 +65,7 @@ export default async function Home() {
                 {game.game_name}
               </h2>
               <p className="text-sm text-gray-600 mt-1 line-clamp-2">
-                this game called {game.game_name}.
+                by {game.game_creator}.
               </p>
 
               
