@@ -49,7 +49,7 @@ export default async function Home() {
           >
             {/* Game Image */}
             <div className="relative w-full h-48 overflow-hidden">
-              <Image
+              <Image 
                 src={game.game_picture} //picure here
                 alt={"/Angry Birb5.png"}
                 fill
@@ -78,7 +78,7 @@ export default async function Home() {
           </Link>
         ))}
       </div>
-
+        <div> update a </div>
     </div>
   );
 }
