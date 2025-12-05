@@ -37,16 +37,6 @@ export default function Login() {
         const cookieStore = await cookies();
         const supabase = createClient(cookieStore);
 
-        /////Fail attempt
-        //  const {error: insertNew} = await supabase.from('gamewebgamelist').insert([{
-        //         game_name: 'protoTestNextJs',
-        //         game_tag: 'puzzle',
-        //         game_creator: 'test_fakeHuman'
-        //     }]);
-        //     if (error){
-        //         console.log("Error fetching newest book:", error);
-        //     }
-
         const data = {
             email: email,
             password: password,
