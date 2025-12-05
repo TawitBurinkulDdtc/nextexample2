@@ -1,3 +1,6 @@
+
+
+
 import { revalidatePath } from "next/cache";
 import { createClient } from "../../lib/supabase/server";
 import { cookies } from "next/headers";
@@ -34,6 +37,16 @@ export default function Login() {
         const cookieStore = await cookies();
         const supabase = createClient(cookieStore);
 
+        /////Fail attempt
+        //  const {error: insertNew} = await supabase.from('gamewebgamelist').insert([{
+        //         game_name: 'protoTestNextJs',
+        //         game_tag: 'puzzle',
+        //         game_creator: 'test_fakeHuman'
+        //     }]);
+        //     if (error){
+        //         console.log("Error fetching newest book:", error);
+        //     }
+
         const data = {
             email: email,
             password: password,
@@ -62,6 +75,7 @@ export default function Login() {
                 membershipstart: membershipStart,
                 membershipend: membershipEnd
             }]);
+         
             if (insertError) {
                 console.log("Error adding a patron: ", insertError);
                 return redirect(`/error?message=${insertError.message}`);
@@ -74,7 +88,7 @@ export default function Login() {
     return (
         <section className="container py-12">
             <form className="bg-white p-6 rounded-md max-w-md mx-auto">
-                <h2 className="text-xl font-bold mb-4">Register</h2>
+                <h2 className="text-xl font-bold mb-4">Login</h2>
                 <input type="email" name='email' placeholder="Email" className="w-full border p-2 mb-3 rounded" required />
                 <input type="password" name='password' placeholder="Password" className="w-full border p-2 mb-3 rounded" required />
                 <div className='flex justify-between'>
