@@ -47,7 +47,11 @@ export default function RootLayout({
                 placeholder="Search for games with tags or creators"
                 className="w-64 sm:w-80 px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
-              
+              <button className="text-sm font-medium text-gray-700 hover:text-pink-600">
+                <a href="/ButtonExample" className="hover:text-pink-600">
+                  Button Example
+                </a>
+              </button>
               <button className="text-sm font-medium text-gray-700 hover:text-pink-600">
                 <a href="/loginPage" className="hover:text-pink-600">
                   Log in

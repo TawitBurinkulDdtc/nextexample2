@@ -6,9 +6,6 @@ import { createClient } from "../lib/supabase/server";
 import { cookies } from "next/headers"
 
 
-
-
-
 export default async function Home() {
     const cookieStore = await cookies();
   const supabase = createClient(cookieStore);
@@ -21,12 +18,12 @@ export default async function Home() {
       }
       ///////
   
-  
 
   if(gameList == null){
     return(<div>No data </div>);
   }
 
+  
 
   return (
     <div className="py-10">
