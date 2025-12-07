@@ -76,6 +76,18 @@ export default async function Home() {
         ))}
       </div>
         <div> update a </div>
+        
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-2xl font-bold text-gray-800">Games</h1>
+
+          <a 
+            href="/"
+            className="text-sm bg-gray-200 px-3 py-1 rounded hover:bg-gray-300"
+          >
+            Refresh
+          </a>
+        </div>
+
     </div>
   );
 }
