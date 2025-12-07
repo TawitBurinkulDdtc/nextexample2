@@ -65,6 +65,14 @@ export default async function Home() {
                 by {game.game_creator}.
               </p>
 
+              <div className="p-3">
+                <a
+                  href={`/edit-game/${game.game_id}`}
+                  className="text-sm text-blue-600 hover:underline"
+                >
+                  Edit Game
+                </a>
+              </div>
               
               <div className="mt-3 text-right">
                 <span className="text-xs font-semibold text-gray-800 bg-gray-100 px-2 py-1 rounded">

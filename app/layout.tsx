@@ -58,6 +58,11 @@ export default function RootLayout({
                 </a>
               </button>
               <button className="text-sm font-medium text-gray-700 hover:text-pink-600">
+                <a href="/edit-game" className="hover:text-pink-600">
+                  Update Game
+                </a>
+              </button>
+              <button className="text-sm font-medium text-gray-700 hover:text-pink-600">
                 <a href="/loginPage" className="hover:text-pink-600">
                   Log in
                 </a>
