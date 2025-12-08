@@ -38,9 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 placeholder="Search for games with tags or creators"
                 className="w-64 sm:w-80 px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
-              <a href="/ButtonExample" className="text-sm font-medium text-gray-700 hover:text-pink-600">
-                Button Example
-              </a>
+           
               <a href="/add-game" className="text-sm font-medium text-gray-700 hover:text-pink-600">
                 Add Game
               </a>
