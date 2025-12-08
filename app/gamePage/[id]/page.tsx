@@ -15,7 +15,7 @@ export default async function GamePage({ params }: GamePageProps) {
   // Fetch this game's data
   const { data: game, error } = await supabase
     .from("gamewebgamelist")
-    .select("game_id, game_name, game_tag, game_creator, game_picture")
+    .select("game_id, game_name, game_tag, game_creator, game_picture,game_info")
     .eq("game_id", gameId)
     .single();
 
@@ -53,6 +53,10 @@ export default async function GamePage({ params }: GamePageProps) {
           <span className="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">
             {game.game_tag}
           </span>
+        </p>
+
+        <p className="text-lg text-gray-700 mb-3">
+          {game.game_info}
         </p>
 
         {/* Link back */}

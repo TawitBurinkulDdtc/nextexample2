@@ -14,6 +14,7 @@ export async function POST(req: Request) {
       game_tag: body.game_tag,
       game_creator: body.game_creator,
       game_picture: body.game_picture,
+      game_info: body.game_info
     },
   ]);
 

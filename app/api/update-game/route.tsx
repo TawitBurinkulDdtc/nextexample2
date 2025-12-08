@@ -14,7 +14,8 @@ export async function POST(req: Request) {
       game_name: body.game_name,
       game_tag: body.game_tag,
       game_creator: body.game_creator,
-      game_picture: body.game_picture
+      game_picture: body.game_picture,
+      game_info: body.game_info
     })
     .eq("game_id", body.game_id);
 

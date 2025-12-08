@@ -66,7 +66,8 @@ export default function EditGame({ params }: any) {
         game_name: game.game_name,
         game_tag: game.game_tag,
         game_creator: game.game_creator,
-        game_picture: newImageURL
+        game_picture: newImageURL,
+        game_info: game.game_info
       })
     });
 
@@ -83,24 +84,31 @@ export default function EditGame({ params }: any) {
       <h1 className="text-2xl font-bold mb-6">Edit Game</h1>
 
       <form onSubmit={handleUpdate} className="space-y-4">
+        <div>game name</div>
         <input
           className="w-full border p-2 rounded"
           value={game.game_name}
           onChange={(e) => setGame({ ...game, game_name: e.target.value })}
         />
-
+        <div>game tag</div>
         <input
           className="w-full border p-2 rounded"
           value={game.game_tag}
           onChange={(e) => setGame({ ...game, game_tag: e.target.value })}
         />
-
+        <div>game creator</div>
         <input
           className="w-full border p-2 rounded"
           value={game.game_creator}
           onChange={(e) => setGame({ ...game, game_creator: e.target.value })}
         />
-
+        <div>game info</div>
+        <input
+          className="w-full border p-2 rounded"
+          value={game.game_info}
+          onChange={(e) => setGame({ ...game, game_info: e.target.value })}
+        />
+        
         {/* Show current image */}
         <div>
           <p className="text-sm text-gray-600 mb-1">Current Image:</p>

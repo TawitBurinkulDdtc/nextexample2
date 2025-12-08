@@ -7,6 +7,7 @@ export default function AddGame() {
   const [gameTag, setGameTag] = useState("");
   const [gameCreator, setGameCreator] = useState("");
   const [gamePicture, setGamePicture] = useState("");
+  const [gameInfo, setGameInfo] = useState("");
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e: any) => {
@@ -18,7 +19,8 @@ export default function AddGame() {
         game_name: gameName,
         game_tag: gameTag,
         game_creator: gameCreator,
-        game_picture: gamePicture
+        game_picture: gamePicture,
+        game_info: gameInfo,
       }),
     });
 
@@ -28,6 +30,7 @@ export default function AddGame() {
       setGameTag("");
       setGameCreator("");
       setGamePicture("");
+      setGameInfo("");
     } else {
       setStatus("Error adding game.");
     }
@@ -55,6 +58,12 @@ export default function AddGame() {
           placeholder="Creator"
           value={gameCreator}
           onChange={(e) => setGameCreator(e.target.value)}
+        />
+        <input
+          className="w-full border p-2 rounded"
+          placeholder="Game Info"
+          value={gameInfo}
+          onChange={(e) => setGameInfo(e.target.value)}
         />
         <input
           className="w-full border p-2 rounded"
