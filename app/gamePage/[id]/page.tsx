@@ -1,42 +1,68 @@
-import React from 'react';
-import { getBookById } from '../../../lib/books';
-import { createClient } from "../../../lib/supabase/server";
+import Image from "next/image";
 import { cookies } from "next/headers";
+import { createClient } from "../../../lib/supabase/server";
 
-type Props = { params: { id: string } };
+type GamePageProps = {
+  params: { id: string };
+};
 
+export default async function GamePage({ params }: GamePageProps) {
+  const cookieStore = await cookies();
+  const supabase = createClient(cookieStore);
 
-export default async function BookPage({ params }: Props) {
+  const gameId = Number(params.id);
 
-    const cookieStore = await cookies();
-    const supabase = createClient(cookieStore);
+  // Fetch this game's data
+  const { data: game, error } = await supabase
+    .from("gamewebgamelist")
+    .select("game_id, game_name, game_tag, game_creator, game_picture")
+    .eq("game_id", gameId)
+    .single();
 
+  if (error || !game) {
+    console.log("Error fetching game:", error);
+    return <div className="pt-10 text-center text-red-500">Game not found.</div>;
+  }
 
-    const {data: book, error:error1 } = await supabase. from ('book')
-        .select(`*, author(name)`)
-        .eq('isbn', params.id);
+  return (
+    <div className="py-10">
+      {/* Game Title */}
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">
+        {game.game_name}
+      </h1>
 
-    if (error1){
-        console.log("Error fetching  info: ", error1);
-    }
-    console.log (book);
+      {/* Image */}
+      <div className="relative w-full max-w-3xl h-80 mx-auto mb-6 rounded-md overflow-hidden shadow">
+        <Image
+          src={game.game_picture}
+          alt={game.game_name}
+          fill
+          className="object-cover"
+          unoptimized
+        />
+      </div>
 
-if (!book) return <div className="container py-12">Book not found</div>;
+      {/* Game Info */}
+      <div className="bg-white p-6 rounded-md shadow max-w-3xl mx-auto">
+        <p className="text-lg text-gray-700 mb-3">
+          <span className="font-semibold">Creator:</span> {game.game_creator}
+        </p>
 
-const aBook = book[0];
-const authorList = aBook.author.map((aut:any)=>aut.name).join(", ");
-console.log (aBook.cover);
-return (
-<section className="container py-12 grid md:grid-cols-3 gap-8">
-<img src={aBook.cover} alt={aBook.title} className="w-full h-auto" />
-<div className="md:col-span-2">
-<h1 className="text-3xl font-bold">{aBook.title}</h1>
+        <p className="text-lg text-gray-700 mb-3">
+          <span className="font-semibold">Tag:</span>{" "}
+          <span className="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">
+            {game.game_tag}
+          </span>
+        </p>
 
-<p className="text-gray-700 mt-4">{aBook.publisher}</p>
-<p className="text-gray-700 mt-4">{aBook.pubyear}</p>
-<p className="text-gray-700 mt-4">{authorList}</p>
-
-</div>
-</section>
-);
+        {/* Link back */}
+        <a
+          href="/"
+          className="inline-block mt-6 bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition"
+        >
+          ← Back to Games
+        </a>
+      </div>
+    </div>
+  );
 }

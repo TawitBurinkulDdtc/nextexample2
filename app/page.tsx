@@ -64,12 +64,16 @@ export default async function Home() {
             </div>
 
             <div className="p-3">
-              <h2 className="font-semibold text-gray-800 truncate group-hover:text-pink-600 transition-colors">
+              <a
+              href={`/gamePage/${game.game_id}`}
+              className="font-semibold text-gray-800 truncate group-hover:text-pink-600 transition-colors"
+              >
                 {game.game_name}
-              </h2>
+              </a>
               <p className="text-sm text-gray-600 mt-1 line-clamp-2">
                 by {game.game_creator}
               </p>
+              
 
               {/* EDIT LINK */}
               <a
