@@ -8,7 +8,7 @@ type Props = { params: { id: string } };
 
 export default async function BookPage({ params }: Props) {
 
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const supabase = createClient(cookieStore);
 
 
