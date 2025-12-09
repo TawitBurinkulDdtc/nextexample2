@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 
 
 export default async function Profile() {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const supabase = createClient(cookieStore);
 
     const { data: { user } } = await supabase.auth.getUser();
@@ -38,7 +38,7 @@ export default async function Profile() {
         const address = formData.get('address') as string;
         const avartarFile = formData.get('avartar') as File;
 
-        const cookieStore = cookies();
+        const cookieStore = await cookies();
         const supabase = createClient(cookieStore);
 
         const { data: { user } } = await supabase.auth.getUser();

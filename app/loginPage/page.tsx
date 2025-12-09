@@ -10,7 +10,7 @@ export default function Login() {
         const email = formData.get('email') as string;
         const password = formData.get('password') as string;
 
-        const cookieStore = cookies();
+        const cookieStore = await cookies();
         const supabase = createClient(cookieStore);
 
         const data = {
