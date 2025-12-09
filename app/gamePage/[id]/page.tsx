@@ -7,7 +7,7 @@ type GamePageProps = {
 };
 
 export default async function GamePage({ params }: GamePageProps) {
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
   const supabase = createClient(cookieStore);
 
   const gameId = Number(params.id);
