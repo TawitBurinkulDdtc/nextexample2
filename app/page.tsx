@@ -9,7 +9,7 @@ import { revalidatePath } from "next/cache";
 async function deleteGame(game_id: number) {
   "use server";
 
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
   const supabase = createClient(cookieStore);
 
   const { error } = await supabase
@@ -26,7 +26,7 @@ async function deleteGame(game_id: number) {
 // -------------------------------------------------
 
 export default async function Home() {
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
   const supabase = createClient(cookieStore);
 
   const { data: gameList, error } = await supabase
