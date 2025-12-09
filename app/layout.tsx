@@ -42,6 +42,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/add-game" className="text-sm font-medium text-gray-700 hover:text-pink-600">
                 Add Game
               </a>
+              <a href="/edit-game" className="text-sm font-medium text-gray-700 hover:text-pink-600">
+                Update Game
+              </a>
               <a href="/loginPage" className="text-sm font-medium text-gray-700 hover:text-pink-600">
                 Log in
               </a>
