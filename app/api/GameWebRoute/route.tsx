@@ -1,12 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "../../../lib/supabase/server";
+import { cookies } from "next/headers";
+import { createServerClient } from "@supabase/ssr";
 
 export async function GET(req: NextRequest) {
-  // ❌ REMOVE THIS — no more cookieStore
-  // const cookieStore = await cookies();
+  const cookieStore = cookies();
 
-  // ✔ Correct — createClient has NO parameters now
-  const supabase = createClient();
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name) {
+          return cookieStore.get(name)?.value;
+        },
+      },
+    }
+  );
 
   const { data: gameweb, error } = await supabase
     .from("gamewebgamelist")
